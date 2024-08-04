@@ -1,0 +1,64 @@
+spring:
+  datasource:
+    url: ${JDBC_DATABASE_URL}
+
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 30MB
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+
+  liquibase:
+    change-log: classpath:db/changelog/changelog.xml
+    enabled: false
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+      debug: true
+
+  freemarker:
+    template-loader-path: classpath:/templates/
+    check-template-location: false
+
+logging:
+  level:
+    de.aittr.lmsbe: ${APP_LOGGING_LEVEL:INFO}
+    de.aittr.lmsbe.service: ${LMS_SERVICE_LOGGING_LEVEL:INFO}
+    de.aittr.lmsbe.service.cohort.CohortService: ${COHORT_SERVICE_LOGGING_LEVEL:INFO}
+    de.aittr.lmsbe.github.service.GHServiceImpl: ${GH_SERVICE_LOGGING_LEVEL:INFO}
+    org.hibernate.SQL: ${HIBERNATE_LOGGING_LEVEL:INFO}
+
+video-expiration-minutes: 300
+lesson-video-bucket-name: "lesson-videos"
+default-video-type: lecture
+default-video-cohort-prefix: cohort_
+confirm-link-expired-days: 2
+
+git:
+  upload:
+    file:
+      #10MB
+      maxFileSize: 10_485_760
+      max: 300
+  organization: ait-tr
+  template-repo: ${GIT_TEMPLATE_REPO}
+  template-owner: ${GIT_TEMPLATE_OWNER}
+
+google:
+  client:
+    client-id: ${GOOGLE_CLIENT_ID}
+    client-secret: ${GOOGLE_CLIENT_SECRET}
+    redirectUri: ${GOOGLE_REDIRECT_URI}

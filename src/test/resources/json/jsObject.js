@@ -1,0 +1,1 @@
+{cohort: ["25","26"], module: "basic_programming", type: "lecture", lesson: "lesson26", topic: "Hello, World!!!"}

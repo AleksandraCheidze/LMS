@@ -1,0 +1,67 @@
+{
+  "payload": {
+    "account_id": "zTs-89PKQ-2nngDWQ0TXCg",
+    "object": {
+      "uuid": "3vtuEUPFS+uaTRxC+sDEwA==",
+      "id": 87418353632,
+      "account_id": "zTs-89PKQ-2nngDWQ0TXCg",
+      "host_id": "8xBl2p4vSBCTZrc4hR0inw",
+      "topic": "cohort: \"26\", module: \"basic_programming\", type: \"lecture\", lesson: \"1\", topic: \"HTML intro\" ",
+      "type": 2,
+      "start_time": "2023-06-26T15:31:21Z",
+      "timezone": "Europe/Berlin",
+      "host_email": "surovtseva-ang@yandex.ru",
+      "duration": 197,
+      "total_size": 576559379,
+      "recording_count": 3,
+      "share_url": "https://us02web.zoom.us/rec/share/jDISY01SIeY44XyVj2KgaIcv24ghKexwzDeDMM8oUPp-hXCrMBoEyShmEa_dne1D.Nkee66XTzSr4KV2D",
+      "recording_files": [
+        {
+          "id": "ef97b55d-c39e-452b-81dc-e19a34293a1e",
+          "meeting_id": "3vtuEUPFS+uaTRxC+sDEwA==",
+          "recording_start": "2023-06-26T15:33:03Z",
+          "recording_end": "2023-06-26T18:50:10Z",
+          "file_type": "M4A",
+          "file_extension": "M4A",
+          "file_size": 178097688,
+          "play_url": "https://us02web.zoom.us/rec/play/tly7th5pkrTsIbInaoAE1rd353dxo-2zhRCKu50jMH25qPWW3p8eQRaM8arVAnMHszmkM_kik2MPAuWJ.UnfCLkUiGL5UEJTf",
+          "download_url": "https://us02web.zoom.us/rec/webhook_download/tly7th5pkrTsIbInaoAE1rd353dxo-2zhRCKu50jMH25qPWW3p8eQRaM8arVAnMHszmkM_kik2MPAuWJ.UnfCLkUiGL5UEJTf/nVpixHQJ1dD8utDaQUYo2gDM60FhHzzDFa1sSSitFFKlDXXFOO4joQT98D8aj8E.l4jaSq4hr26adiD4",
+          "status": "completed",
+          "recording_type": "audio_only"
+        },
+        {
+          "id": "0f975656-e9fc-4f00-b50a-72faff39b977",
+          "meeting_id": "3vtuEUPFS+uaTRxC+sDEwA==",
+          "recording_start": "2023-06-26T15:33:03Z",
+          "recording_end": "2023-06-26T18:50:10Z",
+          "file_type": "MP4",
+          "file_extension": "MP4",
+          "file_size": 398459664,
+          "play_url": "https://us02web.zoom.us/rec/play/LlXs5uYxYzI3UgQGCdHAyE4fMzYXtPJQqSPKd2yVPyZ2SQzqsHU0zMtrc3gFhnJL4NgGmRHqA-ZeZZva.gyT1PK1rJ6f8d7gt",
+          "download_url": "https://us02web.zoom.us/rec/webhook_download/LlXs5uYxYzI3UgQGCdHAyE4fMzYXtPJQqSPKd2yVPyZ2SQzqsHU0zMtrc3gFhnJL4NgGmRHqA-ZeZZva.gyT1PK1rJ6f8d7gt/wxL2ybGY6TCQTegkIpCrPR2O1yLPfLKp-cokQ7JAM0mJu72PAMmRCTfTP5c_I64.W0u3An34VauLaggz",
+          "status": "completed",
+          "recording_type": "shared_screen_with_speaker_view"
+        },
+        {
+          "id": "c461794b-dd26-401e-b8ec-e376436bf75b",
+          "meeting_id": "3vtuEUPFS+uaTRxC+sDEwA==",
+          "recording_start": "2023-06-26T15:33:03Z",
+          "recording_end": "2023-06-26T18:50:10Z",
+          "file_type": "CHAT",
+          "file_extension": "TXT",
+          "file_size": 2027,
+          "play_url": "https://us02web.zoom.us/rec/play/R7C5zDeeLpyp4nB0FstfY15hBVCX9AzqZHQFHgEONbVGGIQUs4_dCnr1gQxasTcdBUVmzgsCPdgM_2x-.OK1V4q6-FSS6a--d",
+          "download_url": "https://us02web.zoom.us/rec/webhook_download/R7C5zDeeLpyp4nB0FstfY15hBVCX9AzqZHQFHgEONbVGGIQUs4_dCnr1gQxasTcdBUVmzgsCPdgM_2x-.OK1V4q6-FSS6a--d/Rdsv0LvjC3H4ZU5JSnAt4QBwjoHULUZf-vIthVLhPFuZ087t55y_wHC-0fpkldww.6fV3ib6QfoI6X8zk",
+          "status": "completed",
+          "recording_type": "chat_file"
+        }
+      ],
+      "password": ".H@Ie17W",
+      "recording_play_passcode": "r_JRu-rshdiNPaDQhrOPuIIvjVBPYuU7",
+      "on_prem": false
+    }
+  },
+  "event_ts": 1687808678244,
+  "event": "recording.completed",
+  "download_token": "eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL2V2ZW50Lnpvb20udXMiLCJhY2NvdW50SWQiOiJ6VHMtODlQS1EtMm5uZ0RXUTBUWENnIiwiYXVkIjoiaHR0cHM6Ly9vYXV0aC56b29tLnVzIiwibWlkIjoiM3Z0dUVVUEZTK3VhVFJ4QytzREV3QT09IiwiZXhwIjoxNjg3ODk1MDkzLCJ1c2VySWQiOiI4eEJsMnA0dlNCQ1RacmM0aFIwaW53In0.cNIdAEQRyDWPcqrO7xSzq-Krh5_661BYG1Bw7LqixfoYhiGxil3Q6TA48Ig4Ah77AsWHkZDaT69qGBWztFUk8A"
+}

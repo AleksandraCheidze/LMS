@@ -1,0 +1,97 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 30MB
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  liquibase:
+    change-log: classpath:db/changelog/changelog.xml
+    enabled: false
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+
+
+            enable: true
+
+      debug: true
+
+  freemarker:
+    template-loader-path: classpath:/templates/
+    check-template-location: false
+
+base:
+  url: http://localhost:8080
+
+logging:
+  level:
+    de.aittr.lmsbe: ${APP_LOGGING_LEVEL:DEBUG}
+    de.aittr.lmsbe.service: ${LMS_SERVICE_LOGGING_LEVEL:DEBUG}
+    de.aittr.lmsbe.service.cohort.CohortService: ${COHORT_SERVICE_LOGGING_LEVEL:DEBUG}
+    de.aittr.lmsbe.github.service.GHServiceImpl: ${GH_SERVICE_LOGGING_LEVEL:DEBUG}
+    org.hibernate.SQL: ${HIBERNATE_LOGGING_LEVEL:INFO}
+
+video-expiration-minutes: 300
+lesson-video-bucket-name: "lesson-videos"
+default-video-type: lecture
+default-video-cohort-prefix: cohort_
+confirm-link-expired-days: 2
+
+aws:
+  s3:
+    accessKey: ${S3_SERVICE_ACCESS_KEY}
+    secretKey: ${S3_SERVICE_SECRET_KEY}
+    serviceEndpoint: ${S3_SERVICE_ENDPOINT}
+    signingRegion: ${S3_SERVICE_REGION}
+
+zoom:
+  accountId: ${ZOOM_ACCOUNT_ID}
+  clientId: ${ZOOM_CLIENT_ID}
+  clientSecret: ${ZOOM_CLIENT_SECRET}
+  secretHookToken: ${ZOOM_HOOK_TOKEN}
+
+github:
+  key: ${GITHUB_KEY}
+  user: ${GITHUB_USER}
+
+csv:
+  lineLimit: 500
+  bucketNameForCsvFiles: "lms-docs/csv-import/imports"
+  bucketNameForValidationReports: "lms-docs/csv-import/validation-reports"
+  bucketNameForImportReports: "lms-docs/csv-import/import-reports"
+
+git:
+  upload:
+    file:
+      #10MB
+      maxFileSize: 10_485_760
+      max: 300
+  organization: ait-tr
+  template-repo: ${GIT_TEMPLATE_REPO}
+  template-owner: ${GIT_TEMPLATE_OWNER}
+
+google:
+  client:
+    client-id: ${GOOGLE_CLIENT_ID:fakeGoogleClientId}
+    client-secret: ${GOOGLE_CLIENT_SECRET:fakeGoogleClientSecret}
+    redirectUri: ${GOOGLE_REDIRECT_URI:fakeGoogleRedirectUrl}

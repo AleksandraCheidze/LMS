@@ -1,0 +1,47 @@
+video-expiration-minutes: 300
+lesson-video-bucket-name: "lesson-videos"
+default-video-type: lecture
+default-video-cohort-prefix: cohort_
+aws:
+  s3:
+    accessKey: "access key"
+    secretKey: "secret key"
+    serviceEndpoint: "https://fra1.digitaloceanspaces.com"
+    signing-region: "fra1"
+
+zoom:
+  accountId: "accountId"
+  clientId: "clientId"
+  clientSecret: "clientSecret"
+  secretHookToken: "secretHookToken"
+
+spring:
+  liquibase:
+    enabled: false
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 30MB
+
+base:
+  url: http://localhost:8080
+
+github:
+  key: github_testKey
+  user: github_testUser
+
+csv:
+  lineLimit: 500
+  bucketNameForCsvFiles: "lms-docs/csv-import/imports"
+  bucketNameForValidationReports: "lms-docs/csv-import/validation-reports"
+  bucketNameForImportReports: "lms-docs/csv-import/import-reports"
+
+git:
+  upload:
+    file:
+      #10MB
+      maxFileSize: 10_485_760
+      max: 300
+  organization: ait-tr
+  template-repo: GIT_TEMPLATE_REPO
+  template-owner: GIT_TEMPLATE_OWNER

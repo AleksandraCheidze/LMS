@@ -1,0 +1,35 @@
+### Add user
+
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "cohort": "Cohort 21",
+  "email": "nesterov.alexsey@gmail.com",
+  "firstName": "Alex",
+  "lastName": "Nesterov",
+  "country": "Germany",
+  "phone": "+491234567890"
+}
+
+### Confirm Check
+POST http://localhost:8080/users/confirm/check
+Content-Type: application/json
+
+{
+  "uuid": "998bf356-8ad6-4985-817e-bca1821fbe0b"
+}
+
+
+
+### Add user (Bad Request)
+
+POST http://localhost:8080/api/students
+Content-Type: application/json
+
+{
+  "cohort": "Cohort 21",
+  "email": "john.doe.example.com",
+  "lastName": "",
+  "phone": "+49565148448-4"
+}

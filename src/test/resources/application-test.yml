@@ -1,0 +1,81 @@
+lesson-video-bucket-name: "lesson-videos"
+video-expiration-minutes: 300
+confirm-link-expired-days: 2
+base:
+  url: http://localhost:8080
+
+aws:
+  s3:
+    accessKey: "access key"
+    secretKey: "secret key"
+    serviceEndpoint: "https://fra1.digitaloceanspaces.com"
+    signing-region: "fra1"
+
+zoom:
+  accountId: "accountId"
+  clientId: "clientId"
+  clientSecret: "clientSecret"
+  secretHookToken: "secretHookToken"
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  liquibase:
+    enabled: false
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 30MB
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: johndoe.aittr@gmail.com
+    password: jjxvtlblshoswhzr
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+      debug: true
+
+  freemarker:
+    template-loader-path: classpath:/templates/
+    check-template-location: false
+
+github:
+  key: github_testKey
+  user: github_testUser
+
+csv:
+  lineLimit: 500
+  bucketNameForCsvFiles: "lms-docs/csv-import/imports"
+  bucketNameForValidationReports: "lms-docs/csv-import/validation-reports"
+  bucketNameForImportReports: "lms-docs/csv-import/import-reports"
+
+git:
+  upload:
+    file:
+      maxFileSize: 10_485_760
+      max: 300
+  organization: ait-tr
+
+google:
+  client:
+    client-id: googleClientId
+    client-secret: googleClientSecret
+    redirectUri: googleRedirectUri

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="#1" author="vadim">
+        <createTable tableName="cohort">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="name" type="varchar(255)"/>
+            <column name="alias" type="varchar(255)"/>
+            <column name="github_repository" type="varchar(255)"/>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="#2" author="vadim">
+        <createTable tableName="account">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="country" type="varchar(255)"/>
+            <column name="email" type="varchar(255)"/>
+            <column name="password_hash" type="varchar(255)"/>
+            <column name="first_name" type="varchar(255)"/>
+            <column name="last_name" type="varchar(255)"/>
+            <column name="is_active" type="boolean"/>
+            <column name="phone" type="varchar(255)"/>
+            <column name="role" type="varchar(255)"/>
+            <column name="state" type="varchar(255)"/>
+
+            <column name="primary_cohort_id" type="BIGINT">
+                <constraints foreignKeyName="fk_primary_cohort_id" references="cohort(id)"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="#3" author="vadim">
+        <createTable tableName="confirmation_code">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="expired_time" type="timestamp"/>
+            <column name="uuid" type="varchar(255)"/>
+
+            <column name="user_id" type="BIGINT">
+                <constraints foreignKeyName="fk_code_user_id" references="account(id)"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="#4" author="vadim">
+        <createTable tableName="student_cohort">
+
+            <column name="user_id" type="BIGINT">
+                <constraints foreignKeyName="fk_user_id" references="account(id)"/>
+            </column>
+
+            <column name="cohort_id" type="BIGINT">
+                <constraints foreignKeyName="fk_cohort_id" references="cohort(id)"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet id="loadData" author="vadim">
+        <sqlFile path="db/data/cohorts.sql"/>
+    </changeSet>
+
+</databaseChangeLog>
